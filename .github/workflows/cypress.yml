@@ -1,6 +1,9 @@
 name: Cypress Tests
 
 on:
+  schedule:
+    # Runs every day at 16:40 UTC (10:10 PM IST)
+    - cron: "40 16 * * *"
   push:
     branches: [main]
   pull_request:
